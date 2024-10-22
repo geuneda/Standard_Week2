@@ -27,14 +27,16 @@ public class ObjectPool : MonoBehaviour
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }
-            PoolDictionary.Add(name, objectPool);
+            PoolDictionary.Add(pool.name, objectPool);
         }
     }
 
     public GameObject Get(string name)
     {
         if (!PoolDictionary.ContainsKey(name))
+        {
             return null;
+        }
 
         GameObject obj = PoolDictionary[name].Dequeue();
         PoolDictionary[name].Enqueue(obj);

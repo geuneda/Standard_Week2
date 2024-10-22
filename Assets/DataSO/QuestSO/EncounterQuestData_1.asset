@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0dffba1b82b3a43ad42a59af1307e2, type: 3}
+  m_Name: EncounterQuestData_1
+  m_EditorClassIdentifier: 
+  QuestName: "\uC720\uB2C8\uD2F0\uC758 \uCCAB\uAC78\uC74C"
+  QuestRequiredLevel: 14
+  QuestNPC: 0
+  QuestPrerequisites: 
+  NPCName: "\uD55C\uD6A8\uC2B9 \uB9E4\uB2C8\uC800\uB2D8"
