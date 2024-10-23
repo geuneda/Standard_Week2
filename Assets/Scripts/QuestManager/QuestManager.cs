@@ -10,6 +10,7 @@ public class QuestManager : MonoBehaviour
     public List<QuestDataSO> Quests;
     private static QuestManager instance;
     private string questPrint;
+
     public static QuestManager Instance
     {
         get
@@ -23,6 +24,7 @@ public class QuestManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -32,6 +34,12 @@ public class QuestManager : MonoBehaviour
 
     private void Start()
     {
+        LoadQuestList();
+    }
+
+    private void LoadQuestList()
+    {
+
         for (int i = 0; i < Quests.Count; i++)
         {
             questPrint += $"Quest {i + 1} - {Quests[i].QuestName} (최소 레벨 {Quests[i].QuestRequiredLevel})";
