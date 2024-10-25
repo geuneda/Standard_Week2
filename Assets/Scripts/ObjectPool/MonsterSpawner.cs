@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class MonsterSpawner : MonoBehaviour
 {
-    public ObjectPool objectPool;
+    public ObjectPoolManager objectPool;
     public string monsterName = "Monster";
     public Transform spawnPoint;
 
     public float spawnInterval = 1f;
     public float spawnTime;
+
     private void Update()
     {
         spawnTime += Time.deltaTime;
@@ -24,7 +25,7 @@ public class MonsterSpawner : MonoBehaviour
 
     private void SpawnMonster()
     {
-        GameObject monster = objectPool.Get(monsterName);
+        GameObject monster = objectPool.GetFromPool(monsterName);
         if (monster != null)
         {
             monster.transform.position = spawnPoint.position;

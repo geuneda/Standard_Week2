@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    private ObjectPool objectPool;
+    private ObjectPoolManager objectPool;
 
-    public void Initialize(ObjectPool pool)
+    public void Initialize(ObjectPoolManager pool)
     {
         objectPool = pool;
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        objectPool.Release(gameObject);
+        objectPool.ReleaseToPool(gameObject);
     }
 }
